@@ -3,7 +3,7 @@
    height: 45px;
    position: relative;
    display: flex;
-   align-items: center;
+   align-items: top;
    justify-content: center;
    cursor: pointer;
 
@@ -16,6 +16,7 @@
       position: absolute;
       font-size: 10px;
       font-weight: bold;
-      bottom: 12px;
+      bottom: 22px;
+      color: red;
    }
 }
