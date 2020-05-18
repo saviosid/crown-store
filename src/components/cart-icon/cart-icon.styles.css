@@ -5,9 +5,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -23,6 +23,7 @@
   position: absolute;
   font-size: 10px;
   font-weight: bold;
-  bottom: 12px;
+  bottom: 22px;
+  color: red;
 }
 /*# sourceMappingURL=cart-icon.styles.css.map */

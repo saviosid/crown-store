@@ -79,7 +79,8 @@
 .menu-item .content .title {
   font-weight: bold;
   margin: 0 6px 0;
-  font-size: 22px;
+  font-family: Arial;
+  font-size: 18px;
   color: #4a4a4a;
 }
 

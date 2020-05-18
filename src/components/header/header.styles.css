@@ -1,56 +1,60 @@
-.header {
-  height: 70px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 25px;
+.navbar {
+  min-height: 50px;
+  
 }
 
-.header .title {
-  height: 110%;
+.navbar-brand {
+  padding: 0 25;
+  height: 90px;
+}
+
+.navbar .title {
   color: green;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   font-size: 50px;
   font-weight: 600px;
-  font-family: Forte,Colonna MT, Brush Script MT;
+  font-family: Forte, Colonna MT, Brush Script MT;
 }
 
-.header .logo-container {
-  height: 100%;
-  width: 10%;
-  padding: 0px;
-}
-
-.header .options {
-  width: 70%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-size: 18px;
-}
-
-.header .options .option {
-  padding: 10px 15px;
+.option {
+  padding: 0px 15px;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: red;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: green;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: lightgreen;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: green;
+}
+
+.navbar-light .navbar-nav .active > .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active:hover,
+.navbar-light .navbar-nav .nav-link.show:hover,
+.navbar-light .navbar-nav .show > .nav-link:hover {
+  color: lightgreen;
+}
+
+.navbar-toggler {
+  width: 52px;
+  height: 44px;
+  background-color: #e7252f;
+  border: none;
+}
+
+.collapse {
+  margin-top: 0px;
+  position: relative;
+  margin-left: 15px;
 }
 /*# sourceMappingURL=header.styles.css.map */

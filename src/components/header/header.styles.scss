@@ -1,12 +1,22 @@
-.title {
+.navbar {
+   min-height:80px;
+   padding-left: 0;
+   padding-right: 0;
+}
+
+.navbar-brand {
+   padding-top:0 25px;
+   height: 90px;
+}
+.navbar .title {
    color: green;
-   font-size: 45px;
+   font-size: 50px;
    font-weight: 600px;
    font-family: Forte, Colonna MT, Brush Script MT;
 }
 
 .option {
-   padding: 0px 15px;
+   padding: 0px 0px;
    cursor: pointer;
    font-size: 18px;
    font-weight: 700;
@@ -15,14 +25,29 @@
 
 .navbar-light .navbar-nav .nav-link {
    color: green;
-   &:hover{
-      color:lightgreen;
+   &:hover {
+      color: lightgreen;
    }
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-   color:green;
-   &:hover{
-      color:lightgreen;
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+   color: green;
+   &:hover {
+      color: lightgreen;
    }
+}
+
+.navbar-toggler {
+   width: 52px;
+   height: 44px;
+   background-color: #e7252f;
+}
+
+.collapse {
+   margin-top: 0px;
+   position: relative;
+   margin-left: 10px;
 }

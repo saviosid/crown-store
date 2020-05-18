@@ -1,23 +1,25 @@
 import React from 'react';
 import './header.styles.scss';
 import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from '../../assets/bulogLogo.svg';
+/*import { ReactComponent as Logo } from '../../assets/bulogLogo.svg';*/
 import img from '../../assets/bulogLogo.svg';
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
 import CartIcon from '../cart-icon/cart-icon.component';
-import CartDropdown from '../card-dropdown/card-dropdown.component';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
 const Header = ({ currentUser, hidden }) => {
    return (
-      <nav className='navbar navbar-expand-lg navbar-light '>
-         <a href='/' className='navbar-brand mr-auto'>
-            <img src={img} alt='No Image'></img>
-            <span className='title ' text>
+      <nav className='navbar navbar-expand-lg navbar-light bg-white mb-3'>
+         <a href='/' className='navbar-brand mb-3'>
+            <img src={img} alt=''></img>
+         </a>
+         <div className='title mt-2 mr-auto'>
+            <span className='title '>
                {' '}
                CeLia's Shoppe
             </span>
-         </a>
+         </div>
 
          <button
             className='navbar-toggler'
@@ -32,18 +34,18 @@ const Header = ({ currentUser, hidden }) => {
          </button>
 
          <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-            <ul class='navbar-nav ml-auto'>
-               <li class='nav-item active'>
+            <ul className='navbar-nav ml-auto mt-3    '>
+               <li className='nav-item active'>
                   <Link to='/shop' className='nav-link option'>
                      SHOP
                   </Link>
                </li>
-               <li class='nav-item '>
+               <li className='nav-item '>
                   <Link to='/contact' className='nav-link option'>
                      CONTACT
                   </Link>
                </li>
-               <li class='nav-item '>
+               <li className='nav-item '>
                   {currentUser ? (
                      <div
                         className='nav-link option'
@@ -57,14 +59,14 @@ const Header = ({ currentUser, hidden }) => {
                      </Link>
                   )}
                </li>
-               <li nav-item option>
-                  <CartIcon class='nav-link option' />
+               <li className='nav-item option'>
+                  <CartIcon className='option' />
                </li>
             </ul>
-            {hidden ? null : <CartDropdown />}
+                  {hidden ? null : <CartDropdown />}
          </div>
       </nav>
-   );
+   )
 };
 
 const mapStateToProps = (state) => ({

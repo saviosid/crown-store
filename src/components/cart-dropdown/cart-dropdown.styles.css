@@ -1,5 +1,5 @@
 .cart-dropdown {
-  position: absolute;
+  position: relative;
   width: 240px;
   height: 340px;
   display: -webkit-box;
@@ -10,10 +10,13 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px;
-  border: 1px solid black;
+  border: 3px solid green;
   background-color: white;
   top: 90px;
-  right: 40px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  /*right: 40px;*/
   z-index: 5;
 }
 
@@ -32,4 +35,6 @@
 .cart-dropdown button {
   margin-top: auto;
 }
+
+/* media query for size 600px and below -responsive;*/
 /*# sourceMappingURL=cart-dropdown.styles.css.map */
