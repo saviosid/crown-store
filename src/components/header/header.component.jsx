@@ -7,10 +7,13 @@ import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import {createStructuredSelector} from 'reselect';
+import {selectCartHidden} from '../../redux/cart/cart.selectors';
+import { selectCurrentUser} from '../../redux/user/user.selector';
 
 const Header = ({ currentUser, hidden }) => {
    return (
-      <nav className='navbar navbar-expand-lg navbar-light bg-white mb-3'>
+      <nav className='navbar navbar-expand-lg navbar-light bg-white mb-1 '>
          <a href='/' className='navbar-brand mb-3'>
             <img src={img} alt=''></img>
          </a>
@@ -69,8 +72,16 @@ const Header = ({ currentUser, hidden }) => {
    )
 };
 
-const mapStateToProps = (state) => ({
-   currentUser: state.user.currentUser,
-   hidden: state.cart.hidden,
+/*const mapStateToProps = (state) => ({
+   currentUser: selectCurrentUser(state),
+   hidden: selectCartHidden(state),
+});*/
+/* Instead of the above mapStateToProps where :
+   we pass state in every call we can use createStructuredSelector */
+
+const mapStateToProps = createStructuredSelector({
+   currentUser: selectCurrentUser,
+   hidden: selectCartHidden,
 });
+
 export default connect(mapStateToProps)(Header);
